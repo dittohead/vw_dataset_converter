@@ -1,4 +1,4 @@
-class Carscanner2XML_dataset_converter:
+class Carscanner2XMLConverter:
     def __init__(self, input_string):
         self.str = input_string
         self.blocks = []
