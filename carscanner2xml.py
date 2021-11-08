@@ -4,7 +4,7 @@ class Carscanner2XMLConverter:
         self.blocks = []
         self.result_str = ''
 
-    def convert(self):
+    def divide_line_to_blocks(self):
         k=0
         for i in range(int(len(self.str)/2)):
             try:
@@ -21,7 +21,7 @@ class Carscanner2XMLConverter:
         self.result_str = self.result_str.rstrip(",",)
         return self.result_str
 
-    def compare_lenght(self):
+    def _compare_lenght(self):
         input_str_len = len(self.str)
         blocks_item_count = len(self.blocks)
         if input_str_len/2 == blocks_item_count:
@@ -30,9 +30,9 @@ class Carscanner2XMLConverter:
             return False
 
     def get_result(self):
-        self.convert()
+        self.divide_line_to_blocks()
         self.combine_output()
-        if self.compare_lenght():
+        if _self.compare_lenght():
             return self.result_str
         else:
             return -1
