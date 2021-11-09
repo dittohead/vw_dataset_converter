@@ -32,7 +32,7 @@ class Carscanner2XMLConverter:
     def get_result(self):
         self.divide_line_to_blocks()
         self.combine_output()
-        if _self.compare_lenght():
+        if self._compare_lenght():
             return self.result_str
         else:
             return -1
